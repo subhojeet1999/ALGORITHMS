@@ -26,9 +26,9 @@ void merge(int *ar,int l,int mid,int h)
 	while(i<=mid && j<=h)
 	{
 		if(ar[i]<=ar[j])
-		temp[k++]=ar[i++];
+			temp[k++]=ar[i++];
 		else
-		temp[k++]=ar[j++];
+			temp[k++]=ar[j++];
 	}
 	while(i<=mid)
 		temp[k++]=ar[i++];
