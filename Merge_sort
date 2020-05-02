@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void split(int *,int ,int);
+void merge(int*,int,int ,int);
+
+int main()
+{
+	  int *ar,n,i=0;
+	  printf("\nEnter capacity:");
+	  scanf("%d",&n);
+	  ar=(int*)malloc(sizeof(int));
+	  printf("\nEnter elements:");
+	  for(i=0;i<n;i++)
+	      scanf("%d",&ar[i]);
+	  printf("\nSorted array:");
+	  split(ar,0,n-1);
+	  for(i=0;i<n;i++)
+      	printf("%3d",ar[i]);
+}
