@@ -12,16 +12,16 @@ void split(int *ar,int l,int h)
 	if(l<h)
 	{
 		mid=(l+h)/2;
-		split(ar,l,mid);
-		split(ar,mid+1,h);
-		merge(ar,l,mid,h);
+		split(ar, l, mid);
+		split(ar, mid+1, h);
+		merge(ar, l, mid, h);
 	}
 }
 
 
-void merge(int *ar,int l,int mid,int h)
+void merge(int *ar, int l, int mid, int h)
 {
-	int i=l,j=mid+1,k=0;
+	int i=l, j=mid+1, k=0;
 	int temp[h-l+1];
 	while(i<=mid && j<=h)
 	{
@@ -41,13 +41,13 @@ void merge(int *ar,int l,int mid,int h)
 int main()
 {
 	int *ar,n,i=0;
-	printf("\nEnter capacity:  ");
+	printf("\nEnter Capacity:  ");
 	scanf("%d",&n);
 	ar=(int*)malloc(sizeof(int));
 	printf("\nEnter elements: \n");
 	for(i=0;i<n;i++)
 		scanf("%d",&ar[i]);
-	printf("\nSorted array:");
+	printf("\nSorted Array:\t");
 	split(ar,0,n-1);
 	for(i=0;i<n;i++)
 		printf("%d\t",ar[i]);
