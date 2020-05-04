@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include<stdlib.h>
-void bubble_sort(int *ar, int n) {
+void bubble_sort(int *ar, int n)
+{
     int i = 0, j = 0, tmp;
     for (i = 0; i < n; i++)
-	 {   
+    {   
         for (j = 0; j < n - i - 1; j++) 
-		{
-            if (ar[j] > ar[j + 1]) {  
+	{
+            if (ar[j] > ar[j + 1])
+	    {  
                 tmp = ar[j];
                 ar[j] = ar[j + 1];
                 ar[j + 1] = tmp;
