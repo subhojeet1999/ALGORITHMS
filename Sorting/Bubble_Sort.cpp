@@ -14,7 +14,8 @@ void bubble_sort(int *ar, int n) {
         }
     }
 }
-int main() {
+int main() 
+{
   int *ar, n, i, d, swap;
   printf("Enter number of elements in the array:\n");
   scanf("%d", &n); 
